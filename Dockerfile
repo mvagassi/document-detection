@@ -1,6 +1,8 @@
 # Gunakan base image Python versi 3.11
 FROM python:3.11-alpine
 
+RUN apt update && apt install -y tesseract-ocr libtesseract-dev
+
 # Tentukan direktori kerja di dalam container
 WORKDIR /app
 
